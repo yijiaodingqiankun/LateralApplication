@@ -1,4 +1,5 @@
 
+
 侧滑菜单的最基本用法
 
 
@@ -59,4 +60,12 @@
             2.在res文件夹下创建menu文件夹，在menu文件夹下创建Menu resource file(xml)布局文件。
             3.在layout文件夹下创建headlayout，xml。
             menu是线上具体的菜单项的，headlayout是显示头布局的。
+<android.support.design.widget.NavigationView
+    android:id="@+id/nav"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    app:headerLayout="@layout/head"
+    app:menu="@menu/nav_menu" />
+注意红色的三行代码一定要有（也就是最后3行代码），最后侧滑菜单的监听等功能，自己加。
 
