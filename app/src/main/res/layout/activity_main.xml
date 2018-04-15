@@ -19,16 +19,17 @@
             android:background="?attr/colorPrimary" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="主菜单显示的内容" />
+            android:text="这是主菜单" />
+
     </LinearLayout>
 
-    <TextView
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:background="#fff"
-        android:text="侧滑菜单中显示的内容"
-        android:textSize="30sp" />
+        app:headerLayout="@layout/head"
+        app:menu="@menu/nav_menu" />
 </android.support.v4.widget.DrawerLayout>
