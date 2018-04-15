@@ -38,3 +38,14 @@
 3.第二个子控件要注意：android:layout_gravity="start"这个属性是必须指定的，因为我们要告诉DrawerLayout侧滑菜单是在屏幕的左边还是右边，left表示在左边，right表示在右边。start表示会根据系统语言进行判断，如果系统语言是从左往右的，比如英语、汉语，侧滑菜单就在左边，如果系统语言是从右往左的，比如阿拉伯语，侧滑菜单就在右边。
 
 
+其他知识点：
+//            让导航按钮显示出来
+            actionBar.setDisplayHomeAsUpEnabled(true);
+
+//            设置一个导航按钮图标
+            actionBar.setHomeAsUpIndicator(R.mipmap.ic_launcher);
+
+            Toolbar最左侧的按钮叫作HomeAsUp,默认是一个返回的箭头，含义是返回上一个活动
+
+            HomeAsUp按钮的id永远都是android.R.id.home
+            DrawerLayout的openDrawer()方法将滑动菜单展示出来，注意openDrawer()方法要求传人一个Gravity参数，为了保证这里的行为和Xml中定义的一致，我们传人了GravityCompat.START
